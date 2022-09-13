@@ -1,6 +1,7 @@
 
 #include "main.h"
 #include "6-abs.c"
+#include "print_num.c"
 /**
  * print_to_98 - check the code
  * @n: starts from
@@ -35,26 +36,4 @@ void print_to_98(int n)
 		}
 	}
 	_putchar('\n');
-}
-
-/**
- * print_num - Prints nums with Putchar
- * @n: number to be printed
- * Return: Nothing;
- */
-void print_num(int n)
-{
-	if (n > 99)
-	{
-		_putchar('0' + (n / 100));
-		_putchar('0' + (n % 100) / 10);
-		_putchar('0' + (n % 10));
-	}
-	else if (n > 9)
-	{
-		_putchar('0' + (n / 10));
-		_putchar('0' + (n % 10));
-	}
-	else
-		_putchar('0' + n);
 }
