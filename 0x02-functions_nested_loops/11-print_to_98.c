@@ -18,7 +18,7 @@ void print_to_98(int n)
 				_putchar(' ');
 			if (i < 0)
 				_putchar('-');
-			print_num(i);
+			print_num(_abs(i));
 			if (i != 98)
 				_putchar(',');
 		}
