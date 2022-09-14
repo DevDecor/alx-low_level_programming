@@ -1,51 +1,38 @@
 #include "main.h"
+#include "print_num.c"
 
 /**
- * print_times_table - prints times table
- * @n : times table to use
- * Return:void
+ * print_times_table - Prints the times table for a specific number
+ * @n: times table number
+ * Return: nothing
  */
 
 void print_times_table(int n)
 {
-
-int a = 0, rep, b;
-
-if (n < 0 || n > 15)
-	return;
-
-while (a <= n)
-{
-	for (b = 0; b <= n; b++)
+	if(!(n > 15) && !(n <= 0))
 	{
-		rep = a * b;
-		if (b == 0)
-			_putchar('0' + rep);
-		else if (rep < 10)
+		int i = 0;
+		int j;
+
+		while (i <= n)
 		{
-			_putchar(' ');
-			_putchar(' ');
-			_putchar('0' + rep);
+			j = 0;
+			while (j <= n)
+			{
+				if (j != 0)
+					_putchar(' ');
+				if (j * i < 100)
+					_putchar(' ');
+				if (j * i < 10)
+					_putchar(' ');
+				print_num(i * j);
+				if (j != n)
+					_putchar(',');
+				j++;
+			}
+			_putchar('\n');
+			i++;
 		}
-		else if (rep < 100)
-		{
-			_putchar(' ');
-			_putchar('0' + rep / 10);
-			_putchar('0' + rep % 10);
-		}
-		else
-		{
-			_putchar('0' + rep / 100);
-			_putchar('0' + (rep - 100) / 10);
-			_putchar('0' + rep % 10);
-		}
-		if (b < n)
-		{
-			_putchar(',');
-			_putchar(' ');
-		}
+		_putchar('\n');
 	}
-	_putchar('\n');
-	a++;
-}
 }
