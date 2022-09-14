@@ -12,14 +12,14 @@ int main(void)
 	unsigned long int c;
 	unsigned long int b = 2;
 
-	printf("%ld, ", a);
+	printf("%lu, ", a);
 	for (i = 0; i < 96; i++)
 	{
-		printf("%ld, ", b);
+		printf("%lu, ", b);
 		c = a;
 		a = b;
 		b = c + a;
 	}
-	printf("%ld\n", b);
+	printf("%lu\n", b);
 	return (0);
 }
