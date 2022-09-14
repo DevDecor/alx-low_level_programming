@@ -11,7 +11,7 @@ int main(void)
 	unsigned long int a = 1;
 	unsigned long int c;
 	unsigned long int b = 2;
-	
+
 	printf("%ld, ", a);
 	for (i = 0; i < 48; i++)
 	{
@@ -21,4 +21,5 @@ int main(void)
 		b = c + a;
 	}
 	printf("%ld\n", b);
+	return (0);
 }
