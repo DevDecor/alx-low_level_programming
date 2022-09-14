@@ -20,14 +20,20 @@ void print_times_table(int n)
 			while (j <= n)
 			{
 				if (j != 0)
+				{
 					_putchar(' ');
-				if (j * i < 100)
-					_putchar(' ');
-				if (j * i < 10)
-					_putchar(' ');
-				print_num(i * j);
-				if (j != n)
-					_putchar(',');
+					if (j * i < 100)
+						_putchar(' ');
+					if (j * i < 10)
+						_putchar(' ');
+					print_num(i * j);
+					if (j != n)
+						_putchar(',');
+				}
+				else
+				{
+					print_num(i * j);
+				}
 				j++;
 			}
 			_putchar('\n');
