@@ -3,7 +3,8 @@
 
 /**
  * main - Entry point
- * Return: Prints the sum of natural numbers less than 1024 that are multible of 3 or 5
+ * Return: Prints the sum of natural numbers
+ * less than 1024 that are multible of 3 or 5
  */
 
 int main(void)
