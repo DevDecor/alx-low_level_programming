@@ -33,6 +33,7 @@ void print_times_table(int n)
 				else
 				{
 					print_num(i * j);
+					_putchar(',');
 				}
 				j++;
 			}
