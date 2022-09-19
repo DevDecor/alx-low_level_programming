@@ -20,4 +20,4 @@ void puts_half(char *str1)
 		_putchar(str1[i]);
 	}
 	_putchar('\n');
-
+}
