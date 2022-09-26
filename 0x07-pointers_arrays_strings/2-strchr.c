@@ -1,5 +1,12 @@
 #include <stddef.h>
 
+/**
+ * _strchr - finds character
+ * @s: pointer to string
+ * @c: Lost character
+ * Return: pointer to the lost char in the string
+ */
+
 char *_strchr(char *s, char c)
 {
 	int i = 0;
