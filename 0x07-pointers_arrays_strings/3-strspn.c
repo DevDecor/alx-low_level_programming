@@ -25,8 +25,7 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (b == 0)
 			break;
-		else
-			count++;
+		count++;
 		i++;
 	}
 	return (count);
