@@ -1,4 +1,12 @@
 #include "main.h"
+
+/**
+ * _memset - Sets a buffer
+ * @s: pointer to the memory allocated
+ * @b: Fill
+ * @n: number of slots
+ * Return: pointer to the BAse
+ */
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i = 0;
