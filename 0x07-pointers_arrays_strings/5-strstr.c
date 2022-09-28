@@ -1,6 +1,13 @@
 #include "main.h"
 #include "2-strchr.c"
 #include <stddef.h>
+
+/**
+ * _strstr - Return the pointer to a substring
+ * @haystack: string
+ * @needle: substring
+ * Return: pointer
+ */
 char *_strstr(char *haystack, char *needle)
 {
 	char *p = _strchr(haystack, *(needle + 0));
