@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  * create_array - Creates an array
  * @size: size of the array
@@ -6,12 +7,13 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *str = (char *) malloc(sizeof(c) * size);
+	char *str = malloc(sizeof(c) * size);
 
-	while (n >= 0)
+	while (size != 0)
 	{
-		char[n] = c;
-		n--;
+		str[size] = c;
+		size--;
 	}
-	return (chr);
+	str[size] = c;
+	return (str);
 }
