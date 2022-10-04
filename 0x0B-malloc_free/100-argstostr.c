@@ -10,7 +10,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j, count = 0;
+	int i, j, count = 0, index = 0;
 	char *p = NULL;
 
 	if (ac == 0 || av == NULL)
@@ -31,11 +31,13 @@ char *argstostr(int ac, char **av)
 		j = 0;
 		while (av[i][j] != '\0')
 		{
-			*p = av[i][j];
-			p++;
+			p[index] = av[i][j];
+			index++;
 			j++;
 		}
-		*p = '\n';
+		p[index] = '\n';
+		index++;
 	}
+	p[++index] = '\0';
 	return (p);
 }
