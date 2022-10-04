@@ -2,10 +2,16 @@
 #include <stddef.h>
 #include <string.h>
 
+/**
+ * argstostr - Concatenates the arguments to one string
+ * @ac:  argument count
+ * @av: aeguments array
+ * Return: pointer to the new string
+ */
 char *argstostr(int ac, char **av)
 {
 	int i, j, count = 0;
-	char *p;
+	char *p = NULL;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
