@@ -1,0 +1,35 @@
+#include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
+
+char *argstostr(int ac, char **av)
+{
+	int i, j, count = 0;
+	char *p;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
+
+	i = 0;
+	while (i < ac)
+	{
+		count += strlen(av[i]);
+		i++;
+	}
+	p = malloc(sizeof(char) * (count + ac + 1));
+	if (p == NULL)
+		return (NULL);
+
+	for (i = 0; i < ac; i++)
+	{
+		j = 0;
+		while (av[i][j] != '\0')
+		{
+			*p = av[i][j];
+			p++;
+			j++;
+		}
+		*p = '\n';
+	}
+	return (p);
+}
