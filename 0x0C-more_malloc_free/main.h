@@ -1,5 +1,8 @@
 #include <stdlib.h>
 #include <stddef.h>
+#ifndef min
+#define min(a,b)            (((a) < (b)) ? (a) : (b))
+#endif
 void *malloc_checked(unsigned int);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
