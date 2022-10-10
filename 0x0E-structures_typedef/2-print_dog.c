@@ -1,4 +1,9 @@
 #include "dog.h"
+/**
+ * print_dog - Prints a dog structure
+ * @d: the dog structure
+ * Return: nothing
+ */
 void print_dog(struct dog *d)
 {
 	if (d != NULL)
