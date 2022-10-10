@@ -6,6 +6,7 @@
 int main(void)
 {
 	char p[] = __FILE__;
+
 	printf("%s\n", p);
 	return (0);
 }
