@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int (*p)(int, int), d;
+	int (*p)(int, int);
 
 	if (argc != 4)
 	{
@@ -31,7 +31,6 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	d = p(atoi(argv[1]), atoi(argv[3]));
-	printf("%d\n", d);
-	return (d);
+	printf("%d\n", p(atoi(argv[1]), atoi(argv[3])));
+	return (0);
 }
