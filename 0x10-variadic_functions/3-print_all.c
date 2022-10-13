@@ -36,7 +36,7 @@ void print_char(va_list a)
 }
 
 /**
- * prints_string - Prints a string
+ * print_string - Prints a string
  * @a: string to be printed
  * Return: nothing
  */
@@ -44,7 +44,10 @@ void print_string(va_list a)
 {
 	char *x = va_arg(a, char *);
 
-	printf("%s", x);
+	if (x == NULL)
+		printf("(nil)");
+	else
+		printf("%s", x);
 }
 
 /**
