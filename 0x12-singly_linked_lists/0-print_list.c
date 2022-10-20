@@ -1,4 +1,9 @@
 #include "lists.h"
+/**
+ * print_list - Prints the valuse in a linked list
+ * @h: head
+ * Return: number of nodes on the list
+ */
 size_t print_list(list_t *h)
 {
 	int count = 0;
