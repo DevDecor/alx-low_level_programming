@@ -15,6 +15,8 @@ void free_list(list_t *head)
 		this = head;
 		head = head->next;
 		free(this);
+		this = NULL;
 	}
 	free(head);
+	head = NULL;
 }
