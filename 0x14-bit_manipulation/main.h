@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stddef.h>
 #include <stdlib.h>
-#include <math.h>
+unsigned int _pow(unsigned int, unsigned int);
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
 int get_bit(unsigned long int n, unsigned int index);

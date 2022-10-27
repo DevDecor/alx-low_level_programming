@@ -14,12 +14,31 @@ unsigned int binary_to_uint(const char *b)
 	while (*b != '\0')
 	{
 		if (*b == '1')
-			sum += pow((2), (len - i));
+			sum += _pow((2), (len - i));
 		else if (*b != '0')
 			return (0);
 		i++;
 		b++;
 	}
 	return (sum);
+}
+/**
+ * _pow - Power function
+ * @x: base number
+ * @y: power
+ * Return: x^y
+ */
+unsigned int _pow(unsigned int x, unsigned int y)
+{
+	int res = x;
+
+	if (y == 0)
+		return (1);
+	while (y > 1)
+	{
+		res *= x;
+		y--;
+	}
+	return (res);
 
 }
