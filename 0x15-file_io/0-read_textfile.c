@@ -8,6 +8,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	count = read(op, buff, letters);
+	buff[letters] = '\0';
 	write(0, buff, count);
 	return (count);
 }
