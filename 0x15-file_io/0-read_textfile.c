@@ -12,7 +12,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	count = read(op, buff, letters);
 	if (count == -1)
+	{
+		free(buff);
 		return (0);
+	}
 	buff[letters] = '\0';
 	write(STDOUT_FILENO, buff, count);
 	free(buff);
