@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buff[letters] = '\0';
 	x = write(STDOUT_FILENO, buff, count);
 	if (x == -1 || x != count)
-		count = 0;
+		return (0);
 	free(buff);
 	return (count);
 }
