@@ -2,7 +2,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buff = malloc(sizeof(char) * letters);
-	int count, op = open(filename, O_RDONLY);
+	ssize_t count, op = open(filename, O_RDONLY), x;
 
 	if (buff == NULL || filename == NULL || op < 0)
 	{
@@ -17,7 +17,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	buff[letters] = '\0';
-	write(STDOUT_FILENO, buff, count);
+	x = write(STDOUT_FILENO, buff, count);
+	if (x == -1 || x != count)
+		count = 0;
 	free(buff);
 	return (count);
 }
