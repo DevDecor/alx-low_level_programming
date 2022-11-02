@@ -21,5 +21,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (x == -1 || x != count)
 		return (0);
 	free(buff);
-	return (count);
+	return (x);
 }
