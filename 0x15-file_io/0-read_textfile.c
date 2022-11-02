@@ -1,7 +1,7 @@
 #include "main.h"
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *buff = malloc(sizeof(char) * letters);
+	char *buff = malloc((sizeof(char) * letters) + 1);
 	ssize_t count, op = open(filename, O_RDONLY), x;
 
 	if (buff == NULL || filename == NULL || op < 0)
