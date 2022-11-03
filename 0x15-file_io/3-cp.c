@@ -4,10 +4,10 @@
 
 
 /**
- * _exit - prints error messages and exits with exit number
+ * __exit - prints error messages and exits with exit number
  *
  * @error: either the exit number or file descriptor
- * @str: name of either file_in or file_out
+ * @s: name of either file_in or file_out
  * @fd: file descriptor
  *
  * Return: 0 on success
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 	if (file_in == -1)
 		__exit(98, argv[1], 0);
 
-	file_out = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 00600);
+	file_out = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 00664);
 	if (file_out == -1)
 		__exit(99, argv[2], 0);
 
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 	{
 		if (read_in == -1)
 			__exit(98, argv[1], 0);
-	
+
 		write_out = write(file_out, buff, read_in);
 		if (write_out == -1)
 			__exit(99, argv[2], 0);
