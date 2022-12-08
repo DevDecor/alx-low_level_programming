@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * free_dnodeint - Adds a node at the beginning of a doubly linked list
+ * free_dlistint - Adds a node at the beginning of a doubly linked list
  * @head: head node
  * Return: the new head node
  */
