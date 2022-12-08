@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "1-dlistint_len.c"
 /**
  * insert_dnodeint_at_index - Adds node at an index of a doubly linked list
  * @h: head node
@@ -11,6 +12,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *b = *h, *s;
 	unsigned int i = 0;
 
+	if (idx == (unsigned int)dlistint_len(*h))
+		return (add_dnodeint_end(h, (const int)n));
 	while (b != NULL)
 	{
 		if (i == idx)
