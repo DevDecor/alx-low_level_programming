@@ -4,14 +4,13 @@
  * @h: head node of the list
  * Return: length of the list
  */
-size_t print_dlistint(dlistint_t *h)
+size_t print_dlistint(const dlistint_t *h)
 {
 	size_t i = 0;
-	dlistint_t *b = h;
+	dlistint_t *b;
 
 	while (b != NULL)
 	{
-		printf("%d\n", b->n);
 		i++;
 		b = b->next;
 	}

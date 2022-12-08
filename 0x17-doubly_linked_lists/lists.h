@@ -1,6 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * struct dlistint - list int structure
  * @n: integer data
@@ -13,4 +14,5 @@ typedef struct dlistint
 	struct dlistint *next;
 	struct dlistint *prev;
 } dlistint_t;
+size_t print_dlistint(dlistint_t *h);
 #endif
