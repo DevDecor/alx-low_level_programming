@@ -1,3 +1,4 @@
+#include "search_algos.h"
 /**
  * linear_search - Implimenting the linear search algorithm
  * @array: the array to search
@@ -7,10 +8,11 @@
  */
 int linear_search(int *array, size_t size, int value)
 {
-	int i;
+	size_t i;
 
 	for (i = 0; i < size; i++)
 	{
+		printf("Value checked array[%d] = [%d]\n", (int) i, array[i]);
 		if (array[i] == value)
 			return (i);
 	}
