@@ -2,20 +2,17 @@
 #include "search_algos.h"
 int jump_search(int *array, size_t size, int value)
 {
-	int start = 0, jump = sqrt(size), end = jump, i;
+	int start = 0, jump = sqrt(size), end = jump - 1, i;
 
 	if (!array || size < 1) return (-1);
-	printf("Value checked array[%d] = [%d]\n", 0, array[0]);
-	if (array[0] == value) return (0);
-	start++;
 	while ((end < (int) size) && end != start)
 	{
 		if (array[end] <= value)
-		printf("Value checked array[%d] = [%d]\n", end, array[end]);
+		printf("Value checked array[%d] = [%d]\n", start, array[start]);
 		if (array[end] < value)
 		{
-			start = end;
-			end = start + jump + 1;
+			start = end + 1;
+			end = start + jump;
 		}
 		else if (array[end] == value) return (end);
 		else
